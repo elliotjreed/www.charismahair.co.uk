@@ -9,6 +9,7 @@
 
     <title>Charisma Hair | Hair Styists in Onehouse, Stowmarket</title>
 
+    <meta name="google-site-verification" content="gCgTWGZdTb62k8qTmiynBZslmMdHeRX_b2RRUuNmrOM" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="application-name" content="Elliot J. Reed" />
