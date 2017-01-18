@@ -321,7 +321,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="map">
-                        <iframe width="100%" height="600" src="https://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;coord=52.1979339,0.9554705000000467&amp;q=86a%20Forest%20Road%2C%20Onehouse%2C%20Suffolk%2C%20IP14%203HJ+(Charisma%20Hair)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+                        <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJA9mlvQWw2UcR4iDFUMKisF4&key=AIzaSyBHRxTUDZhmWPzu2ftODJ7lX4A_xmtlUxQ" allowfullscreen="allowfullscreen"></iframe> 
                     </div>
                 </div>
             </div>
@@ -606,7 +606,14 @@
             }
         }
     </script>
-
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-90440102-2', 'auto');
+        ga('send', 'pageview');
+    </script>
 </body>
 
 </html>
