@@ -321,7 +321,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="map">
-                        <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJA9mlvQWw2UcR4iDFUMKisF4&key=AIzaSyBHRxTUDZhmWPzu2ftODJ7lX4A_xmtlUxQ" allowfullscreen="allowfullscreen"></iframe> 
+                        <iframe width="100%" height="300" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJA9mlvQWw2UcR4iDFUMKisF4&key=AIzaSyBHRxTUDZhmWPzu2ftODJ7lX4A_xmtlUxQ" allowfullscreen="allowfullscreen"></iframe> 
                     </div>
                 </div>
             </div>
