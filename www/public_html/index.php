@@ -320,7 +320,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="map">
-                        <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;aq=0&amp;oq=twitter&amp;sll=52.1980745,0.9562433&amp;ie=UTF8&amp;hq=Charisma+Hair&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+                        <iframe width="100%" height="600" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;coord=52.1979339,0.9554705000000467&amp;q=86a%20Forest%20Road%2C%20Onehouse%2C%20Suffolk%2C%20IP14%203HJ+(Charisma%20Hair)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
                     </div>
                 </div>
             </div>
