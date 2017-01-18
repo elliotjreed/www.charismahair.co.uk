@@ -1,3 +1,11 @@
+<?php
+$protocol = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+if (substr($_SERVER['HTTP_HOST'], 0, 4) !== 'www.') {
+    header('HTTP/1.1 301 Moved Permanently');
+    header('Location: ' . $protocol . 'www.' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+    exit;
+}
+?>
 <!doctype html>
 <html lang="en-GB">
 <head>
