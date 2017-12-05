@@ -1,0 +1,14 @@
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+@import "~bulma/bulma";
+@import "modules/colours";
+@import "partials/hero";
+
+body {
+  background: $background;
+}
+
+.card {
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+}
