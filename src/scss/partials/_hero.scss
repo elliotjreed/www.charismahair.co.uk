@@ -1,6 +1,12 @@
 .hero-body {
-  background: url("../images/header.jpg") no-repeat center center fixed;
-  background-size: cover;
+  @include mobile {
+    background: url("../images/header-mobile.jpg") no-repeat;
+    background-size: cover;
+  }
+  @include tablet {
+    background: url("../images/header.jpg") no-repeat;
+    background-size: cover;
+  }
 }
 
 .hero-body .container {
