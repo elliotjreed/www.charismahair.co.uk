@@ -1,6 +1,6 @@
 import webpack from 'webpack'
 import path from 'path'
-import glob from 'glob'
+import glob from 'glob-all'
 
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
@@ -69,10 +69,15 @@ module.exports = [
         }
       }),
       new PurifyCSSPlugin({
-        paths: glob.sync(path.join(__dirname, 'src/*.html')),
+        paths: glob.sync([
+          path.join(__dirname, 'src/*.html'),
+          path.join(__dirname, 'src/*.js')
+        ]),
         minimize: true,
         purifyOptions: {
-          resolveExtensions: ['.html']
+          resolveExtensions: ['.html'],
+          // Whitelist ':not' for Bulma
+          whitelist: ['*:not*']
         }
       }),
       new OfflinePlugin({
