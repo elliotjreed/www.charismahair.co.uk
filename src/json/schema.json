@@ -1,0 +1,49 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Charisma Hair",
+  "legalName": "Charisma Hair",
+  "foundingDate": "1984",
+  "url": "https://www.charismahair.co.uk",
+  "sameAs": [
+    "https://www.facebook.com/charismahairsuffolk/"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "telephone": "01449677202",
+    "areaServed": [
+      "GB"
+    ],
+    "availableLanguage": [
+      "English"
+    ]
+  },
+  "hasPos": {
+    "@type": "Place",
+    "name": "Charisma Hair",
+    "hasMap": {
+      "@type": "Map",
+      "url": "https://www.google.co.uk/maps/place/Charisma+Hair/@52.1980745,0.9562433,15z/data=!4m2!3m1!1s0x0:0x5eb0a2c250c520e2"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "name": "Charisma Hair",
+      "streetAddress": "86a Forest Road",
+      "addressLocality": "Stowmarket",
+      "addressRegion": "Suffolk",
+      "postalCode": "IP14 3HJ",
+      "addressCountry": "United Kingdom"
+    }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "name": "Charisma Hair",
+    "streetAddress": "86a Forest Road",
+    "addressLocality": "Stowmarket",
+    "addressRegion": "Suffolk",
+    "postalCode": "IP14 3HJ",
+    "addressCountry": "United Kingdom",
+    "telephone": "01449677202"
+  }
+}
