@@ -1,0 +1,45 @@
+version: "3"
+
+services:
+    nginx-proxy:
+        image: jwilder/nginx-proxy:alpine
+        container_name: nginx-proxy
+        ports:
+            - "80:80"
+            - "443:443"
+        restart: always
+        volumes:
+            - "/var/run/docker.sock:/tmp/docker.sock:ro"
+            - "/etc/nginx/conf.d"
+            - "/etc/nginx/vhost.d"
+            - "/usr/share/nginx/html"
+            - "./certs:/etc/nginx/certs:ro"
+        networks:
+            - proxy-tier
+
+    letsencrypt-nginx-proxy-companion:
+        image: jrcs/letsencrypt-nginx-proxy-companion
+        container_name: letsencrypt-nginx-proxy-companion
+        volumes_from:
+            - nginx-proxy
+        volumes:
+            - "/var/run/docker.sock:/var/run/docker.sock:ro"
+            - "./certs:/etc/nginx/certs:rw"
+
+    charismahair:
+        build: ./
+        container_name: charismahair
+        restart: always
+        environment:
+            - VIRTUAL_HOST=www.charismahair.co.uk,charismahair.co.uk
+            - VIRTUAL_NETWORK=nginx-proxy
+            - DEFAULT_HOST=www.charismahair.co.uk
+            - LETSENCRYPT_HOST=www.charismahair.co.uk,charismahair.co.uk
+            - LETSENCRYPT_EMAIL=letsencrypt@charismahair.co.uk
+        networks:
+            - proxy-tier
+
+networks:
+    proxy-tier:
+        external:
+            name: nginx-proxy

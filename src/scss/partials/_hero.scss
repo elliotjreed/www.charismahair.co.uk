@@ -1,0 +1,19 @@
+.hero-body {
+  @include mobile {
+    background: url("../images/header-mobile.jpg") no-repeat;
+    background-size: cover;
+  }
+  @include tablet {
+    background: url("../images/header.jpg") no-repeat;
+    background-size: cover;
+  }
+}
+
+.hero-body .container {
+  width: 100%;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, .5),
+      rgba(0, 0, 0, .5)
+    );
+}
