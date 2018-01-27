@@ -15,7 +15,7 @@ services:
             - "/usr/share/nginx/html"
             - "./certs:/etc/nginx/certs:ro"
         networks:
-            - proxy-tier
+            - nginx-proxy-network
 
     letsencrypt-nginx-proxy-companion:
         image: jrcs/letsencrypt-nginx-proxy-companion
@@ -37,9 +37,8 @@ services:
             - LETSENCRYPT_HOST=www.charismahair.co.uk,charismahair.co.uk
             - LETSENCRYPT_EMAIL=letsencrypt@charismahair.co.uk
         networks:
-            - proxy-tier
+            - nginx-proxy-network
 
 networks:
-    proxy-tier:
-        external:
-            name: nginx-proxy
+    nginx-proxy-network:
+        driver: bridge
