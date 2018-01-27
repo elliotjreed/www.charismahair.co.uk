@@ -1,0 +1,22 @@
+$fa-font-path: "~font-awesome/fonts";
+$section-padding: 1rem 1rem;
+
+@import "~font-awesome/scss/font-awesome";
+@import "~bulma/bulma";
+@import "modules/colours";
+@import "partials/hero";
+
+body {
+  background: $background;
+}
+
+.card {
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
+}
+
+.elliotjreed,
+.elliotjreed > a {
+  font-size: smaller;
+  color: #000;
+}
