@@ -57,6 +57,7 @@ module.exports = [
         short_name: 'Charisma',
         description: 'Hair stylists in Onehouse, Stowmarket. Call 01449 677202 to book an appointment.',
         background_color: '#f5f5f5',
+        theme_color: '#a07dac',
         icons: [
           {
             src: path.resolve('./src/images/icon.png'),
