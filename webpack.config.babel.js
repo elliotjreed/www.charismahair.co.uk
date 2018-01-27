@@ -37,8 +37,6 @@ module.exports = [
       }),
       new HtmlWebpackPlugin({
         hash: true,
-        title: 'My Awesome application',
-        pageHeader: 'Hello World',
         template: './index.html',
         filename: './index.html',
         minify: {
@@ -49,11 +47,11 @@ module.exports = [
       }),
       new FaviconsWebpackPlugin('./images/icon.png'),
       new WebpackPwaManifest({
-        name: 'WebPack Boilerplate',
-        short_name: 'WPB',
-        description: 'An example WebPack setup to make a decent progressive web app (PWA).',
-        background_color: '#ffffff',
-        theme_color: '#32C658',
+        name: 'Charisma Hair',
+        short_name: 'Charisma',
+        description: 'Hair stylists in Onehouse, Stowmarket. Call 01449 677202 to book an appointment.',
+        background_color: '#fff',
+        theme_color: '#5c1481',
         icons: [
           {
             src: path.resolve('./src/images/icon.png'),
@@ -110,7 +108,7 @@ module.exports = [
               'presets': [
                 ['@babel/preset-env', {
                   'targets': {
-                    'browsers': ['last 2 versions', 'safari >= 9']
+                    'browsers': ['last 2 versions']
                   }
                 }]
               ]

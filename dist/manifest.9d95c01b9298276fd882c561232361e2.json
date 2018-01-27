@@ -31,12 +31,12 @@
       "type": "image/png"
     }
   ],
-  "name": "WebPack Boilerplate",
-  "short_name": "WPB",
+  "name": "Charisma Hair",
+  "short_name": "Charisma",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": ".",
-  "description": "An example WebPack setup to make a decent progressive web app (PWA).",
-  "background_color": "#ffffff",
-  "theme_color": "#32C658"
+  "description": "Hair stylists in Onehouse, Stowmarket. Call 01449 677202 to book an appointment.",
+  "background_color": "#fff",
+  "theme_color": "#5c1481"
 }
