@@ -46,13 +46,17 @@ module.exports = [
           'collapseWhitespace': true
         }
       }),
-      new FaviconsWebpackPlugin('./images/icon.png'),
+      new FaviconsWebpackPlugin({
+        logo: './images/icon.png',
+        inject: true,
+        background: '#f5f5f5',
+        title: 'Charisma Hair'
+      }),
       new WebpackPwaManifest({
         name: 'Charisma Hair',
         short_name: 'Charisma',
         description: 'Hair stylists in Onehouse, Stowmarket. Call 01449 677202 to book an appointment.',
-        background_color: '#fff',
-        theme_color: '#5c1481',
+        background_color: '#f5f5f5',
         icons: [
           {
             src: path.resolve('./src/images/icon.png'),
