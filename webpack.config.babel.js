@@ -10,6 +10,7 @@ import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 import WebpackPwaManifest from 'webpack-pwa-manifest'
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import PurifyCSSPlugin from 'purifycss-webpack'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 import OfflinePlugin from 'offline-plugin'
 
 const extractSass = new ExtractTextPlugin({
@@ -78,6 +79,9 @@ module.exports = [
           whitelist: ['*:not*']
         }
       }),
+      new CopyWebpackPlugin([
+        { from: 'static' }
+      ]),
       new OfflinePlugin({
         caches: 'all',
         ServiceWorker: {

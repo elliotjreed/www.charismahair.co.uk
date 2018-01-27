@@ -24,6 +24,7 @@
     "babel-loader": "^8.0.0-beta.0",
     "bulma": "^0",
     "clean-webpack-plugin": "^0",
+    "copy-webpack-plugin": "^4",
     "css-loader": "^0",
     "eslint": "^4",
     "eslint-config-standard": "^10",

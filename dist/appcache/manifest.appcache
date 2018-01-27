@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2018-1-27 21:11:59
+#ver:2018-1-27 22:13:05
 #plugin:4.9.0
 
 CACHE:
@@ -64,6 +64,8 @@ CACHE:
 /icon_192x192.c301bccb19843c6789d20f10e331ecb7.png
 /icon_128x128.c060bb87df514cc3d4987622de5dc712.png
 /icon_96x96.6cc0bc84c1db4e38649b9337be9cdc19.png
+/robots.txt
+/sitemap.xml
 
 NETWORK:
 *
