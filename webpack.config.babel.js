@@ -22,7 +22,7 @@ const extractSass = new ExtractTextPlugin({
 module.exports = [
   {
     context: path.resolve(__dirname, 'src'),
-    entry: ['./app.js', './scss/styles.scss'],
+    entry: ['babel-polyfill', './app.js', './scss/styles.scss'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].[chunkhash].js',
@@ -85,7 +85,7 @@ module.exports = [
         }
       }),
       new CopyWebpackPlugin([
-        { from: 'static' }
+        {from: 'static'}
       ]),
       new OfflinePlugin({
         caches: 'all',
@@ -120,7 +120,8 @@ module.exports = [
                     'browsers': ['last 2 versions']
                   }
                 }]
-              ]
+              ],
+              'plugins': ['syntax-dynamic-import']
             }
           }]
         },

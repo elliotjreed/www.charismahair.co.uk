@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2018-1-27 23:09:02
+#ver:2018-1-28 11:32:14
 #plugin:4.9.0
 
 CACHE:
@@ -39,8 +39,8 @@ CACHE:
 /icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-640x920.png
 /icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-640x1096.png
 /icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-748x1024.png
-/icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-768x1004.png
 /icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-750x1294.png
+/icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-768x1004.png
 /icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-1182x2208.png
 /icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-1242x2148.png
 /icons-87e51a16bf0590d2dfb9d4131713c4e3/apple-touch-startup-image-1496x2048.png
@@ -54,7 +54,9 @@ CACHE:
 /912ec66d7572ff821749319396470bde.svg
 /74c2cd803640923442f8093695eff6e2.jpg
 /d26cf8abfc4d4b02ee3d4020af591f36.jpg
-/main.ca204073c5602d6ac2d8.js
+/0.552e6c97acd199ee0ea7.js
+/1.a1613945d2fe533b7ea4.js
+/main.bbad42dc1ac0d68e6117.js
 /styles.css
 /
 /manifest.6c8394d3d85eb83b1a9721871367c07e.json
