@@ -1,0 +1,42 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.22e8a2379d11f8621f2632dc5d19b96a.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.0b719f875128fd8a61e91e069bb12d0f.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_256x256.07d383b41eebb4debaa5fed80644bb0f.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.69637cbd84170f4d0afe3b14832f232a.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.0af525343cc1b3e3a02b52f48f3f92fd.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.a2c742df97d26e86de4f469ea2ea5210.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Charisma Hair",
+  "short_name": "Charisma",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Hair stylists in Onehouse, Stowmarket. Call 01449 677202 to book an appointment.",
+  "background_color": "#f5f5f5",
+  "theme_color": "#a07dac"
+}

@@ -20,10 +20,8 @@ async function getImagesComponent () {
   return images.images()
 }
 
-async function getTrackingComponents () {
-  const eventTracker = await import(/* webpackChunkName: "event-tracker" */ 'autotrack/lib/plugins/event-tracker')
-  const outboundLinkTracker = await import(/* webpackChunkName: "outbound-link-tracker" */ 'autotrack/lib/plugins/outbound-link-tracker')
-  return [eventTracker, outboundLinkTracker]
+async function getTrackingComponent () {
+  return await import(/* webpackChunkName: "autotrack" */ 'autotrack/autotrack.js')
 }
 
 window.addEventListener('load', () => {
@@ -37,7 +35,7 @@ window.addEventListener('load', () => {
     imagesContainer.appendChild(images)
   })
 
-  getTrackingComponents().then(() => {
+  getTrackingComponent().then(() => {
     ga('create', 'UA-90440102-2', 'auto')
     ga('require', 'eventTracker')
     ga('require', 'outboundLinkTracker')
