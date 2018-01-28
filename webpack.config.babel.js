@@ -110,7 +110,7 @@ module.exports = [
         {
           test: /\.js$/,
           include: path.resolve(__dirname, 'src'),
-          exclude: [/node_modules/],
+          exclude: /node_modules\/(?!(autotrack|dom-utils))/,
           use: [{
             loader: 'babel-loader',
             options: {
@@ -126,7 +126,7 @@ module.exports = [
           }]
         },
         {
-          test: /.(png|jpg|gif|ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+          test: /.(png|jpg|gif|webp|ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
           use: [
             {
               loader: 'file-loader',

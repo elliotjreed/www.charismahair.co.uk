@@ -15,6 +15,7 @@
     "hairdressers"
   ],
   "dependencies": {
+    "autotrack": "^2",
     "babel-polyfill": "^6"
   },
   "devDependencies": {

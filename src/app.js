@@ -15,17 +15,32 @@ async function getMapComponent () {
   return map.mapIframe()
 }
 
-getMapComponent().then(mapIframe => {
-  const mapContainer = document.getElementById('map')
-  mapContainer.appendChild(mapIframe)
-})
-
 async function getImagesComponent () {
   const images = await import(/* webpackChunkName: "images" */ './javascript/images.js')
   return images.images()
 }
 
-getImagesComponent().then(images => {
-  const imagesContainer = document.getElementById('images')
-  imagesContainer.appendChild(images)
+async function getTrackingComponents () {
+  const eventTracker = await import(/* webpackChunkName: "event-tracker" */ 'autotrack/lib/plugins/event-tracker')
+  const outboundLinkTracker = await import(/* webpackChunkName: "outbound-link-tracker" */ 'autotrack/lib/plugins/outbound-link-tracker')
+  return [eventTracker, outboundLinkTracker]
+}
+
+window.addEventListener('load', () => {
+  getMapComponent().then(mapIframe => {
+    const mapContainer = document.getElementById('map')
+    mapContainer.appendChild(mapIframe)
+  })
+
+  getImagesComponent().then(images => {
+    const imagesContainer = document.getElementById('images')
+    imagesContainer.appendChild(images)
+  })
+
+  getTrackingComponents().then(() => {
+    ga('create', 'UA-90440102-2', 'auto')
+    ga('require', 'eventTracker')
+    ga('require', 'outboundLinkTracker')
+    ga('send', 'pageview')
+  })
 })
