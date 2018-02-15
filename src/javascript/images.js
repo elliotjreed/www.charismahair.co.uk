@@ -21,16 +21,15 @@ export const images = () => {
 
   const imagesContainer = document.createElement('div')
   imagesContainer.classList.add('columns')
+  imagesContainer.classList.add('is-mobile')
 
   photos.forEach(photo => {
     let imageContainer = document.createElement('div')
     imageContainer.classList.add('column')
 
-    let figure = document.createElement('figure')
-    figure.classList.add('image')
-    figure.classList.add('is-4by3')
-
     let picture = document.createElement('picture')
+    picture.classList.add('image')
+    picture.classList.add('is-4by3')
     let source = document.createElement('source')
     source.setAttribute('srcset', photo[1])
     source.setAttribute('type', 'image/webp')
@@ -42,8 +41,7 @@ export const images = () => {
     picture.appendChild(source)
     picture.appendChild(image)
 
-    figure.appendChild(picture)
-    imageContainer.appendChild(figure)
+    imageContainer.appendChild(picture)
     imagesContainer.appendChild(imageContainer)
   })
 

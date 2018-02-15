@@ -20,10 +20,6 @@ async function getImagesComponent () {
   return images.images()
 }
 
-async function getTrackingComponent () {
-  return await import(/* webpackChunkName: "autotrack" */ 'autotrack/autotrack.js')
-}
-
 window.addEventListener('load', () => {
   getMapComponent().then(mapIframe => {
     const mapContainer = document.getElementById('map')
@@ -33,12 +29,5 @@ window.addEventListener('load', () => {
   getImagesComponent().then(images => {
     const imagesContainer = document.getElementById('images')
     imagesContainer.appendChild(images)
-  })
-
-  getTrackingComponent().then(() => {
-    ga('create', 'UA-90440102-2', 'auto')
-    ga('require', 'eventTracker')
-    ga('require', 'outboundLinkTracker')
-    ga('send', 'pageview')
   })
 })
