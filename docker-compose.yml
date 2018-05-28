@@ -5,8 +5,8 @@ services:
         image: jwilder/nginx-proxy:alpine
         container_name: nginx-proxy
         ports:
-            - "80:80"
-            - "443:443"
+            - 80:80
+            - 443:443
         restart: always
         volumes:
             - "/var/run/docker.sock:/tmp/docker.sock:ro"
@@ -27,7 +27,7 @@ services:
             - "./certs:/etc/nginx/certs:rw"
 
     charismahair:
-        build: ./
+        image: elliotjreed/www.charismahair.co.uk
         container_name: charismahair
         restart: always
         environment:
