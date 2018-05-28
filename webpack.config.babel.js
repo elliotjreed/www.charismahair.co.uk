@@ -75,7 +75,7 @@ module.exports = [
       new PurifyCSSPlugin({
         paths: glob.sync([
           path.join(__dirname, 'src/*.html'),
-          path.join(__dirname, 'src/*.js')
+          path.join(__dirname, 'src/**/*.js')
         ]),
         minimize: true,
         purifyOptions: {
