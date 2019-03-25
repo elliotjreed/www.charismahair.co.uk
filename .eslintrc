@@ -1,7 +1,8 @@
 {
     "extends": "standard",
     "env": {
-        "browser": true,
-        "jasmine": true
-    }
+        "es6": true,
+        "browser": true
+    },
+    "parser": "babel-eslint"
 }
