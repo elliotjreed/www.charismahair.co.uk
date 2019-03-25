@@ -43,6 +43,7 @@
     "glob-all": "^3",
     "html-webpack-plugin": "^2",
     "http-server": "^0",
+    "jest-fetch-mock": "^2.1.1",
     "node-sass": "^4",
     "offline-plugin": "^4",
     "purify-css": "^1",

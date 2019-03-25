@@ -1,44 +1,21 @@
-version: "2"
+version: "3.3"
 
 services:
-    nginx-proxy:
-        image: jwilder/nginx-proxy:alpine
-        container_name: nginx-proxy
-        ports:
-            - 80:80
-            - 443:443
-        restart: always
-        volumes:
-            - "/var/run/docker.sock:/tmp/docker.sock:ro"
-            - "/etc/nginx/conf.d"
-            - "/etc/nginx/vhost.d"
-            - "/usr/share/nginx/html"
-            - "./certs:/etc/nginx/certs:ro"
-        networks:
-            - nginx-proxy-network
-
-    letsencrypt-nginx-proxy-companion:
-        image: jrcs/letsencrypt-nginx-proxy-companion
-        container_name: letsencrypt-nginx-proxy-companion
-        volumes_from:
-            - nginx-proxy
-        volumes:
-            - "/var/run/docker.sock:/var/run/docker.sock:ro"
-            - "./certs:/etc/nginx/certs:rw"
-
-    charismahair:
-        image: elliotjreed/www.charismahair.co.uk
-        container_name: charismahair
-        restart: always
-        environment:
-            - VIRTUAL_HOST=www.charismahair.co.uk,charismahair.co.uk
-            - VIRTUAL_NETWORK=nginx-proxy
-            - DEFAULT_HOST=www.charismahair.co.uk
-            - LETSENCRYPT_HOST=www.charismahair.co.uk,charismahair.co.uk
-            - LETSENCRYPT_EMAIL=letsencrypt@charismahair.co.uk
-        networks:
-            - nginx-proxy-network
+  charismahair:
+    image: elliotjreed/www.charismahair.co.uk
+    container_name: charismahair
+    restart: always
+    networks:
+      - elliotjreed
+      - web
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:www.charismahair.co.uk"
+      - "traefik.protocol=http"
+      - "traefik.port=82"
 
 networks:
-    nginx-proxy-network:
-        driver: bridge
+  elliotjreed:
+  web:
+    external: true
