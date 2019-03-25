@@ -1,7 +1,7 @@
 {
   "name": "charismahair",
   "author": "Elliot J. Reed",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "version": "1.0.0",
   "description": "Website for Charisma Hair (hair salon in Onehouse, Suffolk). Visit www.charismahair.co.uk or call 01449 677202 for appointments or more information.",
   "keywords": [
@@ -14,8 +14,14 @@
     "stylists",
     "hairdressers"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elliotjreed/www.charismahair.co.uk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/elliotjreed/www.charismahair.co.uk/issues"
+  },
   "dependencies": {
-    "autotrack": "^2",
     "babel-polyfill": "^6"
   },
   "devDependencies": {
@@ -43,7 +49,6 @@
     "glob-all": "^3",
     "html-webpack-plugin": "^2",
     "http-server": "^0",
-    "jest-fetch-mock": "^2.1.1",
     "node-sass": "^4",
     "offline-plugin": "^4",
     "purify-css": "^1",
@@ -68,9 +73,5 @@
     "server": "NODE_ENV=production http-server ./dist",
     "lint:js": "eslint 'src/**/*.js'",
     "lint:css": "stylelint 'src/**/*.scss' --scss"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/elliotjreed/www.charismahair.co.uk.git"
   }
 }
