@@ -11,7 +11,7 @@ services:
       - "traefik.docker.network=web"
       - "traefik.enable=true"
       - "traefik.www.frontend.rule=Host:www.charismahair.co.uk"
-      - "traefik.nonwww.frontend.rule=Host:www.charismahair.co.uk"
+      - "traefik.nonwww.frontend.rule=Host:charismahair.co.uk"
       - "traefik.protocol=h2c"
       - "traefik.port=82"
 
