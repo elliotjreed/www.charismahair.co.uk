@@ -8,7 +8,6 @@ import StyleLintPlugin from 'stylelint-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 import WebpackPwaManifest from 'webpack-pwa-manifest'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import PurifyCSSPlugin from 'purifycss-webpack'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import OfflinePlugin from 'offline-plugin'
@@ -27,6 +26,9 @@ module.exports = [
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].[chunkhash].js',
       publicPath: '/'
+    },
+    optimization: {
+      minimize: true
     },
     plugins: [
       new CleanWebpackPlugin(['dist']),
@@ -64,13 +66,6 @@ module.exports = [
             sizes: [96, 128, 192, 256, 384, 512]
           }
         ]
-      }),
-      new UglifyJsPlugin({
-        uglifyOptions: {
-          ie8: false,
-          ecma: 5,
-          mangle: true
-        }
       }),
       new PurifyCSSPlugin({
         paths: glob.sync([
