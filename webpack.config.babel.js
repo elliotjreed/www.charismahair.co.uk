@@ -2,7 +2,7 @@ import webpack from 'webpack'
 import path from 'path'
 import glob from 'glob-all'
 
-import CleanWebpackPlugin from 'clean-webpack-plugin'
+import {CleanWebpackPlugin} from 'clean-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import StyleLintPlugin from 'stylelint-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
@@ -31,7 +31,7 @@ module.exports = [
       minimize: true
     },
     plugins: [
-      new CleanWebpackPlugin(['dist']),
+      new CleanWebpackPlugin(),
       extractSass,
       new StyleLintPlugin({
         context: 'src',
