@@ -24,17 +24,17 @@ export const images = () => {
   imagesContainer.classList.add('is-mobile')
 
   photos.forEach(photo => {
-    let imageContainer = document.createElement('div')
+    const imageContainer = document.createElement('div')
     imageContainer.classList.add('column')
 
-    let picture = document.createElement('picture')
+    const picture = document.createElement('picture')
     picture.classList.add('image')
     picture.classList.add('is-4by3')
-    let source = document.createElement('source')
+    const source = document.createElement('source')
     source.setAttribute('srcset', photo[1])
     source.setAttribute('type', 'image/webp')
 
-    let image = document.createElement('img')
+    const image = document.createElement('img')
     image.setAttribute('src', photo[0])
     image.setAttribute('alt', '')
 
