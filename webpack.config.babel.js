@@ -2,8 +2,8 @@ import webpack from 'webpack'
 import path from 'path'
 import glob from 'glob-all'
 
-import {CleanWebpackPlugin} from 'clean-webpack-plugin'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import StyleLintPlugin from 'stylelint-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
@@ -12,16 +12,10 @@ import PurifyCSSPlugin from 'purifycss-webpack'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import OfflinePlugin from 'offline-plugin'
 
-const extractSass = new ExtractTextPlugin({
-  filename: 'styles.css',
-  disable: process.env.NODE_ENV === 'development',
-  publicPath: '/'
-})
-
 module.exports = [
   {
     context: path.resolve(__dirname, 'src'),
-    entry: ['babel-polyfill', './app.js', './scss/styles.scss'],
+    entry: ['./app.js', './scss/styles.scss'],
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].[chunkhash].js',
@@ -32,7 +26,13 @@ module.exports = [
     },
     plugins: [
       new CleanWebpackPlugin(),
-      extractSass,
+      new MiniCssExtractPlugin({
+        // Options similar to the same options in webpackOptions.output
+        // all options are optional
+        filename: '[name].css',
+        chunkFilename: '[id].css',
+        ignoreOrder: false
+      }),
       new StyleLintPlugin({
         context: 'src',
         syntax: 'scss',
@@ -43,9 +43,9 @@ module.exports = [
         template: './index.html',
         filename: './index.html',
         minify: {
-          'removeComments': true,
-          'removeScriptTypeAttributes': true,
-          'collapseWhitespace': true
+          removeComments: true,
+          removeScriptTypeAttributes: true,
+          collapseWhitespace: true
         }
       }),
       new FaviconsWebpackPlugin({
@@ -80,7 +80,7 @@ module.exports = [
         }
       }),
       new CopyWebpackPlugin([
-        {from: 'static'}
+        { from: 'static' }
       ]),
       new OfflinePlugin({
         caches: 'all',
@@ -92,15 +92,17 @@ module.exports = [
     module: {
       rules: [
         {
-          test: /\.scss$/,
-          use: extractSass.extract({
-            use: [{
-              loader: 'css-loader'
-            }, {
-              loader: 'sass-loader'
-            }],
-            fallback: 'style-loader'
-          })
+          test: /\.(sa|sc|c)ss$/,
+          use: [
+            {
+              loader: MiniCssExtractPlugin.loader,
+              options: {
+                hmr: process.env.NODE_ENV === 'development'
+              }
+            },
+            'css-loader',
+            'sass-loader'
+          ]
         },
         {
           test: /\.js$/,
@@ -109,14 +111,14 @@ module.exports = [
           use: [{
             loader: 'babel-loader',
             options: {
-              'presets': [
+              presets: [
                 ['@babel/preset-env', {
-                  'targets': {
-                    'browsers': ['last 2 versions']
+                  targets: {
+                    browsers: ['last 2 versions']
                   }
                 }]
               ],
-              'plugins': ['syntax-dynamic-import']
+              plugins: ['@babel/syntax-dynamic-import']
             }
           }]
         },

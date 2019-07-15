@@ -1,4 +1,5 @@
-import 'babel-polyfill'
+import 'core-js/stable'
+import 'regenerator-runtime/runtime'
 import * as OfflinePluginRuntime from 'offline-plugin/runtime'
 
 OfflinePluginRuntime.install()
