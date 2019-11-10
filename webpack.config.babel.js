@@ -27,14 +27,11 @@ module.exports = [
     plugins: [
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        // Options similar to the same options in webpackOptions.output
-        // all options are optional
         filename: '[name].css',
         chunkFilename: '[id].css',
         ignoreOrder: false
       }),
       new StyleLintPlugin({
-        context: 'src',
         syntax: 'scss',
         quiet: false
       }),
