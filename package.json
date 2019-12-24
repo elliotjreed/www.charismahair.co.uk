@@ -68,8 +68,10 @@
     "webpack-pwa-manifest": "^4"
   },
   "scripts": {
+    "clean-dist": "rm -rf -d dist",
     "start": "NODE_ENV=development webpack-dev-server",
     "build": "NODE_ENV=production webpack -p --progress",
+    "docker": "yarn run clean-dist && NODE_ENV=development yarn run build && docker build -t elliotjreed/www.charismahair.co.uk . --no-cache && docker push elliotjreed/www.charismahair.co.uk",
     "server": "NODE_ENV=production http-server ./dist",
     "lint:js": "eslint 'src/**/*.js'",
     "lint:css": "stylelint 'src/**/*.scss' --syntax scss"
