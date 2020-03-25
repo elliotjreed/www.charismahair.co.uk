@@ -21,6 +21,17 @@ async function getImagesComponent () {
   return images.images()
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+    const $notification = $delete.parentNode;
+
+    $delete.addEventListener('click', () => {
+      $notification.parentNode.removeChild($notification);
+    });
+  });
+});
+
+
 window.addEventListener('load', () => {
   getMapComponent().then(mapIframe => {
     const mapContainer = document.getElementById('map')
