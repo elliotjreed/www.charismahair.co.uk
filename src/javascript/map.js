@@ -7,6 +7,6 @@ export const mapIframe = () => {
   mapIframe.setAttribute("allowfullscreen", "true");
   mapIframe.setAttribute("title", "Map of the location of Charisma Hair");
   mapIframe.style.width = "100%";
-  mapIframe.style.height = "300px";
+  mapIframe.style.height = "323px";
   return mapIframe;
 };

@@ -1,11 +1,11 @@
 .hero-body {
   @include mobile {
-    background: url("../images/header-mobile.jpg") no-repeat;
+    background: url("https://res.cloudinary.com/elliotjreed/image/upload/f_auto,q_auto/v1592683199/charismahair/header-mobile.jpg") no-repeat;
     background-size: cover;
   }
 
   @include tablet {
-    background: url("../images/header.jpg") no-repeat;
+    background: url("https://res.cloudinary.com/elliotjreed/image/upload/f_auto,q_auto/v1592683200/charismahair/header.jpg") no-repeat;
     background-size: cover;
   }
 }

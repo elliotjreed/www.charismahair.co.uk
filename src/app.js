@@ -1,5 +1,6 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import "lazysizes"
 import * as OfflinePluginRuntime from "offline-plugin/runtime";
 
 OfflinePluginRuntime.install();
@@ -14,13 +15,6 @@ navbarBurger.addEventListener("click", () => {
 async function getMapComponent() {
   const map = await import(/* webpackChunkName: "map" */ "./javascript/map.js");
   return map.mapIframe();
-}
-
-async function getImagesComponent() {
-  const images = await import(
-    /* webpackChunkName: "images" */ "./javascript/images.js"
-  );
-  return images.images();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,10 +33,5 @@ window.addEventListener("load", () => {
   getMapComponent().then((mapIframe) => {
     const mapContainer = document.getElementById("map");
     mapContainer.appendChild(mapIframe);
-  });
-
-  getImagesComponent().then((images) => {
-    const imagesContainer = document.getElementById("images");
-    imagesContainer.appendChild(images);
   });
 });

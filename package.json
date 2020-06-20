@@ -22,7 +22,8 @@
     "url": "https://github.com/elliotjreed/www.charismahair.co.uk/issues"
   },
   "dependencies": {
-    "bulma": "^0.9"
+    "bulma": "^0.9",
+    "lazysizes": "^5.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.10",

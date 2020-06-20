@@ -7,13 +7,16 @@
   <meta name="description" content="Charisma Hair is a unisex hair salon in Onehouse near Stowmarket, catering for all ages and hair types. Call 01449 677202 to book an appointment.">
   <script type="application/ld+json">{
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": "Charisma Hair",
     "legalName": "Charisma Hair",
     "foundingDate": "1984",
     "url": "https://www.charismahair.co.uk",
     "sameAs": [
       "https://www.facebook.com/charismahairsuffolk/"
+    ],
+    "image": [
+      "https://ww.charismahair.co.uk/logo.png"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
@@ -31,7 +34,7 @@
       "name": "Charisma Hair",
       "hasMap": {
         "@type": "Map",
-        "url": "https://www.google.co.uk/maps/place/Charisma+Hair/@52.1980745,0.9562433,15z/data=!4m2!3m1!1s0x0:0x5eb0a2c250c520e2"
+        "url": "https://www.google.com/maps/place/Charisma+Hair/@52.1977752,0.9567005,15z/data=!4m5!3m4!1s0x0:0x5eb0a2c250c520e2!8m2!3d52.1977752!4d0.9567005"
       },
       "address": {
         "@type": "PostalAddress",
@@ -52,13 +55,43 @@
       "postalCode": "IP14 3HJ",
       "addressCountry": "United Kingdom",
       "telephone": "01449677202"
-    }
-  }</script>
+    },
+    "priceRange": "$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Wednesday",
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Thursday",
+        "opens": "09:00",
+        "closes": "17:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ]
+  }
+  </script>
   <link rel="canonical" href="https://www.charismahair.co.uk">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90440102-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag () {dataLayer.push(arguments);}
+
     gtag("js", new Date());
     gtag("config", "UA-90440102-2");
   </script>
@@ -123,10 +156,11 @@
     <section class="notification is-danger">
       <button class="delete"></button>
       <h2 class="has-text-centered title">Coronavirus (COVID-19) Update</h2>
-      <p class="has-text-centered">It is with regret that we have taken the decision to temporarily close the salon until it is deemed safe for us to re-open.</p>
-      <p class="has-text-centered">Rest-assured, we will work all of the hours required to make appointments available for all when it is once again safe to open.</p>
-      <p class="has-text-centered">
-        When we are able to safely re-open there will be some additional procedures in place. Please take a moment to review these <a href="#covid-guidelines">towards the bottom of the site</a>.
+      <p class="has-text-centered mb-2">It is with regret that we have taken the decision to temporarily close the salon until it is deemed safe for us to re-open.</p>
+      <p class="has-text-centered mb-2">Rest-assured, we will work all of the hours required to make appointments available for all when it is once again safe to open.</p>
+      <p class="has-text-centered mb-2">
+        When we are able to safely re-open there will be some additional procedures in place. Please take a moment to review these
+        <a href="#covid-guidelines">towards the bottom of the site</a>.
       </p>
     </section>
 
@@ -221,7 +255,35 @@
 </div>
 
 <div class="section">
-  <div class="container" id="images"></div>
+  <div class="container">
+    <div class="columns is-mobile">
+      <div class="column">
+        <figure class="image is-4by3">
+          <img class="lazyload" src="/px.png" data-src="https://res.cloudinary.com/elliotjreed/image/upload/f_auto,q_auto/v1592683199/charismahair/wedding-hair-service.jpg" alt="Photograph of an a wedding hair style" width="250" height="188">
+        </figure>
+      </div>
+      <div class="column">
+        <figure class="image is-4by3">
+          <img class="lazyload" src="/px.png" data-src="https://res.cloudinary.com/elliotjreed/image/upload/f_auto,q_auto/v1592683199/charismahair/mens-hair-service.jpg" alt="Photograph of a men's hair style" width="250" height="188">
+        </figure>
+      </div>
+      <div class="column">
+        <figure class="image is-4by3">
+          <img class="lazyload" src="/px.png" data-src="https://res.cloudinary.com/elliotjreed/image/upload/f_auto,q_auto/v1592683199/charismahair/hair-style-service.jpg" alt="Photograph of a ladies' hair style" width="250" height="188">
+        </figure>
+      </div>
+      <div class="column">
+        <figure class="image is-4by3">
+          <img class="lazyload" src="/px.png" data-src="https://res.cloudinary.com/elliotjreed/image/upload/f_auto,q_auto/v1592683685/charismahair/eyebrow-service.jpg" alt="Photograph of an eyebrow wax and shape" width="250" height="188">
+        </figure>
+      </div>
+      <div class="column">
+        <figure class="image is-4by3">
+          <img class="lazyload" src="/px.png" data-src="https://res.cloudinary.com/elliotjreed/image/upload/f_auto,q_auto/v1592683199/charismahair/nail-service.jpg" alt="Photograph of a selection of nail polish" width="250" height="188">
+        </figure>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section id="price-list" class="section">
@@ -404,14 +466,17 @@
             <li>We will be unable to accept cash for payment. We accept credit and debit card payment (including via contactless).</li>
           </ul>
         </div>
-        <p>For more information on COVID-19 please visit <a href="https://www.gov.uk/coronavirus" rel="noreferrer noopener">www.gov.uk/coronavirus</a> and <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/" rel="noreferrer noopener">www.nhs.uk/conditions/coronavirus-covid-19</a>.</p>
+        <p>For more information on COVID-19 please visit
+          <a href="https://www.gov.uk/coronavirus" rel="noreferrer noopener">www.gov.uk/coronavirus</a> and
+          <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/" rel="noreferrer noopener">www.nhs.uk/conditions/coronavirus-covid-19</a>.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <div class="container">
+  <div class="container-fluid">
     <address class="content has-text-centered">
       &copy; Charisma Hair
     </address>
