@@ -1,12 +1,15 @@
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "LocalBusiness",
   "name": "Charisma Hair",
   "legalName": "Charisma Hair",
   "foundingDate": "1984",
   "url": "https://www.charismahair.co.uk",
   "sameAs": [
     "https://www.facebook.com/charismahairsuffolk/"
+  ],
+  "image": [
+    "https://ww.charismahair.co.uk/logo.png"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
@@ -24,7 +27,7 @@
     "name": "Charisma Hair",
     "hasMap": {
       "@type": "Map",
-      "url": "https://www.google.co.uk/maps/place/Charisma+Hair/@52.1980745,0.9562433,15z/data=!4m2!3m1!1s0x0:0x5eb0a2c250c520e2"
+      "url": "https://www.google.com/maps/place/Charisma+Hair/@52.1977752,0.9567005,15z/data=!4m5!3m4!1s0x0:0x5eb0a2c250c520e2!8m2!3d52.1977752!4d0.9567005"
     },
     "address": {
       "@type": "PostalAddress",
@@ -45,5 +48,32 @@
     "postalCode": "IP14 3HJ",
     "addressCountry": "United Kingdom",
     "telephone": "01449677202"
-  }
+  },
+  "priceRange": "$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "09:00",
+      "closes": "17:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ]
 }

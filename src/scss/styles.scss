@@ -2,21 +2,32 @@ $fa-font-path: "~font-awesome/fonts";
 $section-padding: 1rem 1rem;
 
 @import "~font-awesome/scss/font-awesome";
-@import "~bulma/bulma";
+@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/container";
+@import "~bulma/sass/elements/button";
+@import "~bulma/sass/elements/box";
+@import "~bulma/sass/grid/columns";
+@import "~bulma/sass/layout/hero";
+@import "~bulma/sass/layout/footer";
+@import "~bulma/sass/helpers/typography";
+@import "~bulma/sass/components/navbar";
+@import "~bulma/sass/components/card";
+@import "~bulma/sass/elements/title";
+@import "~bulma/sass/elements/other";
+@import "~bulma/sass/elements/content";
+@import "~bulma/sass/elements/image";
+@import "~bulma/sass/elements/table";
+@import "~bulma/sass/elements/notification";
 @import "modules/colours";
 @import "partials/hero";
 
 body {
   background: $background;
+  scroll-behavior: smooth;
 }
 
 .card {
   margin-bottom: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .18);
-}
-
-.elliotjreed,
-.elliotjreed > a {
-  font-size: smaller;
-  color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
 }

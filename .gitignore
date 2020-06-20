@@ -1,6 +1,4 @@
 node_modules
-npm-debug.log
 .idea
-certs/*
 !certs/.keep
 dist/*
