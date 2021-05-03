@@ -1,9 +1,6 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import "lazysizes"
-import * as OfflinePluginRuntime from "offline-plugin/runtime";
-
-OfflinePluginRuntime.install();
 
 const navbarBurger = document.getElementById("navbarBurger");
 const target = document.getElementById("navbarMenu");

@@ -1,16 +1,11 @@
 import webpack from "webpack";
 import path from "path";
-import glob from "glob-all";
-
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import StyleLintPlugin from "stylelint-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import FaviconsWebpackPlugin from "favicons-webpack-plugin";
 import WebpackPwaManifest from "webpack-pwa-manifest";
-import PurifyCSSPlugin from "purifycss-webpack";
 import CopyWebpackPlugin from "copy-webpack-plugin";
-import OfflinePlugin from "offline-plugin";
 
 module.exports = [
   {
@@ -45,12 +40,6 @@ module.exports = [
           collapseWhitespace: true,
         },
       }),
-      new FaviconsWebpackPlugin({
-        logo: "./images/icon.png",
-        inject: true,
-        background: "#f5f5f5",
-        title: "Charisma Hair",
-      }),
       new WebpackPwaManifest({
         name: "Charisma Hair",
         short_name: "Charisma",
@@ -60,30 +49,24 @@ module.exports = [
         theme_color: "#a07dac",
         icons: [
           {
+            sizes: [72, 96, 128, 144, 192, 256, 384, 512],
             src: path.resolve("./src/images/icon.png"),
-            sizes: [96, 128, 192, 256, 384, 512],
+          },
+          {
+            sizes: [120, 180, 167, 152, 1024],
+            src: path.resolve("./src/images/icon.png"),
+            ios: true,
+          },
+          {
+            src: path.resolve("./src/images/icon.png"),
+            size: "600x600",
+            purpose: "maskable",
           },
         ],
-      }),
-      new PurifyCSSPlugin({
-        paths: glob.sync([
-          path.join(__dirname, "src/*.html"),
-          path.join(__dirname, "src/**/*.js"),
-        ]),
-        minimize: true,
-        purifyOptions: {
-          resolveExtensions: [".html"],
-          // Whitelist ':not' for Bulma
-          whitelist: ["*:not*"],
-        },
+        inject: true,
+        ios: true,
       }),
       new CopyWebpackPlugin({ patterns: [{ from: "./static", to: "./" }] }),
-      new OfflinePlugin({
-        caches: "all",
-        ServiceWorker: {
-          navigateFallbackURL: "index.html",
-        },
-      }),
     ],
     module: {
       rules: [
@@ -91,9 +74,18 @@ module.exports = [
           test: /\.(sa|sc|c)ss$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: MiniCssExtractPlugin.loader,
             },
             "css-loader",
+            {
+              loader: "postcss-loader",
+              options: {
+                sourceMap: true,
+                postcssOptions: {
+                  plugins: ["postcss-preset-env"],
+                },
+              },
+            },
             "sass-loader",
           ],
         },
