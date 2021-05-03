@@ -4,7 +4,7 @@ module.exports = {
   plugins: [
     require("autoprefixer"),
     purgecss({
-      content: ["./src/**/*.tsx"],
+      content: ["./src/index.html", "./src/**/*.js"],
       safelist: ["pre", "code", "html", "body", "section"]
     })
   ]
