@@ -2,7 +2,6 @@ import webpack from "webpack";
 import path from "path";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import StyleLintPlugin from "stylelint-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import WebpackPwaManifest from "webpack-pwa-manifest";
 import CopyWebpackPlugin from "copy-webpack-plugin";
@@ -25,10 +24,6 @@ module.exports = [
         filename: "[name].css",
         chunkFilename: "[id].css",
         ignoreOrder: false,
-      }),
-      new StyleLintPlugin({
-        syntax: "scss",
-        quiet: false,
       }),
       new HtmlWebpackPlugin({
         hash: true,
