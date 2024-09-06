@@ -1,0 +1,83 @@
+{
+  "icons": [
+    {
+      "src": "./icon_600x600.3bb511b4b4543fc3f304d4d776355a29.png",
+      "sizes": "600x600",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icon_1024x1024.22b49ead028dde7bd3074560a1bc23c5.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_152x152.58535c875dfdcea743069bd1e72c78b5.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_167x167.7feecd1de290df36b5e64606e93f701b.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_180x180.73742414f911fb130bd605bdfe4fa385.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_120x120.219031eea4aa8a2f50651b95a42b1e6b.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_512x512.bee386d7c7d65f8b23f49e1d302fbb23.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_384x384.213dd935de48a1dee569a4241fe75e2e.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_256x256.81dd270ea75c2844f93e35f076c24e43.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_192x192.d9dd6a272b62bd879985a36228eb51ba.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_144x144.16b14fda25517a52223e558fc1447e12.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_128x128.0b7dc898a464bfe373298ea69d02af18.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_96x96.844531271f0fcc928b280ef828895c7d.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon_72x72.253c5237461696ca5142270af4b199c0.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }
+  ],
+  "name": "Charisma Hair",
+  "short_name": "Charisma",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Hair stylists in Onehouse, Stowmarket. Call 01449 677202 to book an appointment.",
+  "background_color": "#f5f5f5",
+  "theme_color": "#a07dac"
+}
